@@ -33,14 +33,14 @@
         <tbody>
             {% for expense in expenses %}
             <tr>
-                <td>{{ expense[0] }}</td>
-                <td>{{ expense[1] }}</td>
-                <td>{{ expense[2] }}</td>
-                <td>{{ expense[3] }}</td>
-                <td>₹{{ expense[4] }}</td>
+                <td>{{ expense.date }}</td>
+                <td>{{ expense.category }}</td>
+                <td>{{ expense.sub_category }}</td>
+                <td>{{ expense.description }}</td>
+                <td>₹{{ expense.amount }}</td>
                 <td>
-                    <a href="/edit/{{ loop.index0 }}" class="btn btn-warning btn-sm">Edit</a>
-                    <a href="/delete/{{ loop.index0 }}" class="btn btn-danger btn-sm" onclick="return confirmDelete()">Delete</a>
+                    <a href="/edit/{{ expense.id }}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/delete/{{ expense.id }}" class="btn btn-danger btn-sm" onclick="return confirmDelete()">Delete</a>
                 </td>
             </tr>
             {% endfor %}
