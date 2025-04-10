@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://flask_user:test%40123@13.203.75.156/expense_tracker"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://flask_user:test123@13.203.75.156/expense_tracker"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.secret_key = "your_secret_key"
 
